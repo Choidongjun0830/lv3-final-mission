@@ -67,7 +67,7 @@ jobs:
       - name: Docker 이미지 Pull
         run: |
           IMAGE=${{ secrets.DOCKERHUB_USERNAME }}/lv3-final:latest
-          docker pull $IMAGE
+          sudo docker pull $IMAGE
 
       - name: 이미지 변경 여부 확인
         id: compare_digest
@@ -101,17 +101,17 @@ jobs:
 
       - name: 환경변수 검증
         run: |
-          docker compose -f docker-compose-dev.yml --env-file .env config | grep SPRING_
+          sudo docker compose -f docker-compose-dev.yml --env-file .env config | grep SPRING_
 
       - name: 컨테이너 재실행
         run: |
-          docker compose --env-file .env -f docker-compose-dev.yml down || true
-          docker compose --env-file .env -f docker-compose-dev.yml up -d
+          sudo docker compose --env-file .env -f docker-compose-dev.yml down || true
+          sudo docker compose --env-file .env -f docker-compose-dev.yml up -d
 
       - name: Docker 리소스 정리
         if: env.skip_deploy == 'false'
         run: |
           echo "Docker 리소스 정리 시작"
-          docker container prune -f --filter "until=24h"
-          docker image prune -f --filter "until=24h"
+          sudo docker container prune -f --filter "until=24h"
+          sudo docker image prune -f --filter "until=24h"
           echo "리소스 정리 완료"
