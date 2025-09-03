@@ -99,9 +99,9 @@ jobs:
 #          echo "DEV_SPRING_DATASOURCE_PASSWORD=lv3-final@@" >> .env
 #          echo "LOGGING_FILE_NAME=/logs/lv3-final-dev.log" >> .env
 
-      - name: 환경변수 검증
-        run: |
-          sudo docker compose -f docker-compose-dev.yml --env-file .env config | grep SPRING_
+#      - name: 환경변수 검증
+#        run: |
+#          sudo docker compose -f docker-compose-dev.yml --env-file .env config | grep SPRING_
 
       - name: 컨테이너 재실행
         run: |
