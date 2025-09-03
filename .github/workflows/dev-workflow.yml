@@ -73,11 +73,11 @@ jobs:
         id: compare_digest
         run: |
           IMAGE=${{ secrets.DOCKERHUB_USERNAME }}/lv3-final:latest
-          NEW=$(docker inspect --format='{{.Id}}' "$IMAGE")
+          NEW=$(sudo docker inspect --format='{{.Id}}' "$IMAGE")
           
           # 기존 컨테이너가 존재하는지 확인
-          if docker inspect server-dev &>/dev/null; then
-          CURRENT=$(docker inspect --format='{{.Image}}' server-dev)
+          if sudo docker inspect server-dev &>/dev/null; then
+          CURRENT=$(sudo docker inspect --format='{{.Image}}' server-dev)
           else
           CURRENT="not_found"
           fi
