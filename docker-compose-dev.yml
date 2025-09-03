@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  server-dev:
+    image: choidongjun/lv3-final:latest
+    container_name: server-dev
+    ports:
+      - "8080:8080"
+    environment:
+#      SPRING_DATASOURCE_URL: ${DEV_SPRING_DATASOURCE_URL}
+#      SPRING_DATASOURCE_USERNAME: ${DEV_SPRING_DATASOURCE_USERNAME}
+#      SPRING_DATASOURCE_PASSWORD: ${DEV_SPRING_DATASOURCE_PASSWORD}
+      LOGGING_FILE_NAME: /logs/dev.log
+    restart: always
+    volumes:
+      - /home/ec2-user/dev/logs:/logs
+
+#networks:
+#  default:
+#    external:
+#      name: mysql-net
