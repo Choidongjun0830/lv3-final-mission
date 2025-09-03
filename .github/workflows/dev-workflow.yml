@@ -19,16 +19,12 @@ jobs:
           java-version: 21
           distribution: temurin
           cache: gradle
-#
-#      - name: application.yml 생성
-#        run: |
-#          echo "Create application.yml(prod) from secret"
-#          mkdir -p src/main/resources
-#          echo "${{ secrets.APPLICATION_DEV_PROPERTIES }}" > src/main/resources/application.yml
-#
-#          echo "Create application.yml(test) from secret"
-#          mkdir -p src/test/resources
-#          echo "${{ secrets.APPLICATION_TEST_PROPERTIES }}" > src/test/resources/application.yml
+
+      - name: application.yml 생성
+        run: |
+          echo "Create application.yml(prod) from secret"
+          mkdir -p src/main/resources
+          echo "${{ secrets.APPLICATION_DEV_PROPERTIES }}" > src/main/resources/application.yml
 
       - name: JAR 빌드
         run: ./gradlew clean build --no-daemon
@@ -92,24 +88,21 @@ jobs:
           echo "skip_deploy=false" >> $GITHUB_ENV
           fi
 
-#      - name: .env 파일 생성
-#        run: |
-#          echo "DEV_SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/lv3-final?useSSL=false&serverTimezone=Asia/Seoul" >> .env
-#          echo "DEV_SPRING_DATASOURCE_USERNAME=root" >> .env
-#          echo "DEV_SPRING_DATASOURCE_PASSWORD=lv3-final@@" >> .env
-#          echo "LOGGING_FILE_NAME=/logs/lv3-final-dev.log" >> .env
+      - name: .env 파일 생성
+        run: |
+          echo "DEV_SPRING_DATASOURCE_URL=${{ secrets.DEV_SPRING_DATASOURCE_URL }}" >> .env
+          echo "DEV_SPRING_DATASOURCE_USERNAME=${{ secrets.DEV_SPRING_DATASOURCE_USERNAME }}" >> .env
+          echo "DEV_SPRING_DATASOURCE_PASSWORD=${{ secrets.DEV_SPRING_DATASOURCE_PASSWORD }}" >> .env
+          echo "LOGGING_FILE_NAME=/logs/lv3-final-dev.log" >> .env
 
-#      - name: 환경변수 검증
-#        run: |
-#          sudo docker compose -f docker-compose-dev.yml --env-file .env config | grep SPRING_
+      - name: 환경변수 검증
+        run: |
+          sudo docker compose -f docker-compose-dev.yml --env-file .env config | grep SPRING_
 
       - name: 컨테이너 재실행
         run: |
-#          sudo docker compose --env-file .env -f docker-compose-dev.yml down || true
-#          sudo docker compose --env-file .env -f docker-compose-dev.yml up -d
-
-          sudo docker compose -f docker-compose-dev.yml down || true
-          sudo docker compose -f docker-compose-dev.yml up -d
+          sudo docker compose --env-file .env -f docker-compose-dev.yml down || true
+          sudo docker compose --env-file .env -f docker-compose-dev.yml up -d
 
       - name: Docker 리소스 정리
         if: env.skip_deploy == 'false'
