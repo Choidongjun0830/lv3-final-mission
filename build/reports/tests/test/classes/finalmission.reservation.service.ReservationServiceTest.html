@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ReservationServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ReservationServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/finalmission.reservation.service.html">finalmission.reservation.service</a> &gt; ReservationServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">14</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.159s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">삭제 시 예약 id에 해당하는 예약 정보가 없으면 예외</td>
+<td class="success">deleteByIdTest1()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">삭제 시 멤버 본인의 예약이 아니면 예외</td>
+<td class="success">deleteByIdTest2()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">정상 삭제 진행 테스트</td>
+<td class="success">deleteByIdTest3()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">조회 시 예약 id에 해당하는 예약 정보가 없으면 예외</td>
+<td class="success">findByIdTest1()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">멤버 예약 조회 성공 테스트</td>
+<td class="success">findByMemberId1()</td>
+<td class="success">0.083s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">멤버 예약 조회시 해당하는 멤버 정보가 없으면 예외</td>
+<td class="success">findByMemberId2()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">식당 예약 조회 성공 테스트</td>
+<td class="success">findByRestaurantId1()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">식당 예약 조회시 해당하는 멤버 정보가 없으면 예외</td>
+<td class="success">findByRestaurantId2()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">예약 생성 시 멤버 정보가 없으면 예외</td>
+<td class="success">saveTest1()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">예약 생성 시 식당 정보가 없으면 예외</td>
+<td class="success">saveTest2()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">정상 예약 생성 테스트</td>
+<td class="success">saveTest3()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">수정 시 해당하는 예약이 없으면 예외</td>
+<td class="success">updateReservationTest1()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">수정 시 멤버 본인의 예약이 아니면 예외</td>
+<td class="success">updateReservationTest2()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">예약 수정 정상 진행 테스트</td>
+<td class="success">updateReservationTest3()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2025-06-14T20:45:47.189+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [finalmission.reservation.service.ReservationServiceTest]: ReservationServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-06-14T20:45:47.190+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration finalmission.FinalMissionApplication for test class finalmission.reservation.service.ReservationServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-06-14T20:45:47.205+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] f.r.service.ReservationServiceTest       : Starting ReservationServiceTest using Java 21.0.6 with PID 55140 (started by choidongjun in /Users/choidongjun/IdeaProjects/lv2-final-mission)
+2025-06-14T20:45:47.205+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] f.r.service.ReservationServiceTest       : The following 1 profile is active: &quot;test&quot;
+2025-06-14T20:45:47.238+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-14T20:45:47.242+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 3 JPA repository interfaces.
+2025-06-14T20:45:47.265+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-14T20:45:47.266+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-14T20:45:47.270+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-14T20:45:47.270+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-06-14T20:45:47.271+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:test user=SA
+2025-06-14T20:45:47.271+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-06-14T20:45:47.271+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-14T20:45:47.291+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists member cascade 
+Hibernate: 
+    drop table if exists reservation cascade 
+Hibernate: 
+    drop table if exists restaurant cascade 
+Hibernate: 
+    create table member (
+        id bigint generated by default as identity,
+        email varchar(255),
+        name varchar(255),
+        password varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table reservation (
+        personnel integer not null,
+        id bigint generated by default as identity,
+        member_id bigint,
+        reservation_date_time timestamp(6),
+        restaurant_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table restaurant (
+        id bigint generated by default as identity,
+        address varchar(255),
+        name varchar(255),
+        menus varchar(255) array,
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists reservation 
+       add constraint FK68999qe28ym9eqqlowybh9nvn 
+       foreign key (member_id) 
+       references member
+Hibernate: 
+    alter table if exists reservation 
+       add constraint FKbna4xjm3tqln2j6kda3fl2yiy 
+       foreign key (restaurant_id) 
+       references restaurant
+2025-06-14T20:45:47.295+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-14T20:45:47.329+09:00  WARN 55140 --- [lv2-final-mission] [    Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-06-14T20:45:47.334+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] f.r.service.ReservationServiceTest       : Started ReservationServiceTest in 0.143 seconds (process running for 2.512)
+Hibernate: 
+    insert 
+    into
+        member
+        (email, name, password, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        restaurant
+        (address, menus, name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    left join
+        member m1_0 
+            on m1_0.id=r1_0.member_id 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    insert 
+    into
+        member
+        (email, name, password, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    update
+        reservation 
+    set
+        member_id=?,
+        personnel=?,
+        reservation_date_time=?,
+        restaurant_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    delete 
+    from
+        reservation 
+    where
+        id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.member_id,
+        r1_0.personnel,
+        r1_0.reservation_date_time,
+        r1_0.restaurant_id 
+    from
+        reservation r1_0 
+    left join
+        restaurant r2_0 
+            on r2_0.id=r1_0.restaurant_id 
+    where
+        r2_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.email,
+        m1_0.name,
+        m1_0.password 
+    from
+        member m1_0 
+    where
+        m1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        reservation
+        (member_id, personnel, reservation_date_time, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.address,
+        r1_0.menus,
+        r1_0.name 
+    from
+        restaurant r1_0 
+    where
+        r1_0.id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14</a> at 2025. 6. 14. 오후 8:45:47</p>
+</div>
+</div>
+</body>
+</html>

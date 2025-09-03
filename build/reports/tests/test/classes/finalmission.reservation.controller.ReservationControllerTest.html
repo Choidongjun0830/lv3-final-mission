@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ReservationControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ReservationControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/finalmission.reservation.controller.html">finalmission.reservation.controller</a> &gt; ReservationControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.106s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+<li>
+<a href="#">Standard error</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">예약 생성 성공 응답 테스트</td>
+<td class="success">createReservationTest1()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">예약 생성 실패 응답 테스트 - 공휴일</td>
+<td class="success">createReservationTest2()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">예약 삭제 성공 테스트</td>
+<td class="success">deleteTest()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">예약 수정 성공 테스트</td>
+<td class="success">updateTest1()</td>
+<td class="success">0.078s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>20:45:45.188 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [finalmission.reservation.controller.ReservationControllerTest]: ReservationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:45:45.246 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration finalmission.FinalMissionApplication for test class finalmission.reservation.controller.ReservationControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-06-14T20:45:45.398+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] f.r.c.ReservationControllerTest          : Starting ReservationControllerTest using Java 21.0.6 with PID 55140 (started by choidongjun in /Users/choidongjun/IdeaProjects/lv2-final-mission)
+2025-06-14T20:45:45.398+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] f.r.c.ReservationControllerTest          : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-06-14T20:45:46.183+09:00  WARN 55140 --- [lv2-final-mission] [    Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-06-14T20:45:46.211+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-06-14T20:45:46.211+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-06-14T20:45:46.212+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-06-14T20:45:46.224+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] f.r.c.ReservationControllerTest          : Started ReservationControllerTest in 0.951 seconds (process running for 1.401)
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /reservations/1
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Content-Length:&quot;59&quot;, Cookie:&quot;token=header.payload.signature&quot;]
+             Body = {&quot;reservationDateTime&quot;:&quot;2025-06-10T10:00:00&quot;,&quot;personnel&quot;:3}
+    Session Attrs = {}
+
+Handler:
+             Type = finalmission.reservation.controller.ReservationController
+           Method = finalmission.reservation.controller.ReservationController#updateReservation(Long, UpdateReservationRequest, LoginMemberInfo)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;id&quot;:1,&quot;reservationDateTime&quot;:&quot;2025-06-10T10:00:00&quot;,&quot;memberResponse&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;eve&quot;,&quot;email&quot;:&quot;eve@example.com&quot;},&quot;restaurantResponse&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;restaurant&quot;,&quot;address&quot;:&quot;address&quot;,&quot;menus&quot;:[&quot;menu&quot;]},&quot;personnel&quot;:3}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /reservations
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Content-Length:&quot;76&quot;, Cookie:&quot;token=header.payload.signature&quot;]
+             Body = {&quot;reservationDateTime&quot;:&quot;2025-06-10T10:00:00&quot;,&quot;restaurantId&quot;:1,&quot;personnel&quot;:2}
+    Session Attrs = {}
+
+Handler:
+             Type = finalmission.reservation.controller.ReservationController
+           Method = finalmission.reservation.controller.ReservationController#createReservation(CreateReservationRequest, LoginMemberInfo)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;id&quot;:1,&quot;reservationDateTime&quot;:&quot;2025-06-10T10:00:00&quot;,&quot;memberResponse&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;eve&quot;,&quot;email&quot;:&quot;eve@example.com&quot;},&quot;restaurantResponse&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;restaurant&quot;,&quot;address&quot;:&quot;address&quot;,&quot;menus&quot;:[&quot;menu&quot;]},&quot;personnel&quot;:2}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /reservations
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Content-Length:&quot;76&quot;, Cookie:&quot;token=header.payload.signature&quot;]
+             Body = {&quot;reservationDateTime&quot;:&quot;2025-06-10T10:00:00&quot;,&quot;restaurantId&quot;:1,&quot;personnel&quot;:2}
+    Session Attrs = {}
+
+Handler:
+             Type = finalmission.reservation.controller.ReservationController
+           Method = finalmission.reservation.controller.ReservationController#createReservation(CreateReservationRequest, LoginMemberInfo)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.IllegalArgumentException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:&quot;application/problem+json&quot;]
+     Content type = application/problem+json
+             Body = {&quot;type&quot;:&quot;about:blank&quot;,&quot;title&quot;:&quot;Bad Request&quot;,&quot;status&quot;:400,&quot;instance&quot;:&quot;/reservations&quot;}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /reservations/1
+       Parameters = {}
+          Headers = [Cookie:&quot;token=header.payload.signature&quot;]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = finalmission.reservation.controller.ReservationController
+           Method = finalmission.reservation.controller.ReservationController#deleteById(Long, LoginMemberInfo)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 204
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</pre>
+</span>
+</div>
+<div class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/choidongjun/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14</a> at 2025. 6. 14. 오후 8:45:47</p>
+</div>
+</div>
+</body>
+</html>

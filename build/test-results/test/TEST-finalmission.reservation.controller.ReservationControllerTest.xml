@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="finalmission.reservation.controller.ReservationControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-06-14T11:45:46.227Z" hostname="choedongjun-ui-MacBookPro.local" time="0.108">
+  <properties/>
+  <testcase name="예약 수정 성공 테스트" classname="finalmission.reservation.controller.ReservationControllerTest" time="0.078"/>
+  <testcase name="예약 생성 성공 응답 테스트" classname="finalmission.reservation.controller.ReservationControllerTest" time="0.009"/>
+  <testcase name="예약 생성 실패 응답 테스트 - 공휴일" classname="finalmission.reservation.controller.ReservationControllerTest" time="0.014"/>
+  <testcase name="예약 삭제 성공 테스트" classname="finalmission.reservation.controller.ReservationControllerTest" time="0.005"/>
+  <system-out><![CDATA[20:45:45.188 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [finalmission.reservation.controller.ReservationControllerTest]: ReservationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:45:45.246 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration finalmission.FinalMissionApplication for test class finalmission.reservation.controller.ReservationControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-06-14T20:45:45.398+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] f.r.c.ReservationControllerTest          : Starting ReservationControllerTest using Java 21.0.6 with PID 55140 (started by choidongjun in /Users/choidongjun/IdeaProjects/lv2-final-mission)
+2025-06-14T20:45:45.398+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] f.r.c.ReservationControllerTest          : No active profile set, falling back to 1 default profile: "default"
+2025-06-14T20:45:46.183+09:00  WARN 55140 --- [lv2-final-mission] [    Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-06-14T20:45:46.211+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-06-14T20:45:46.211+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-06-14T20:45:46.212+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-06-14T20:45:46.224+09:00  INFO 55140 --- [lv2-final-mission] [    Test worker] f.r.c.ReservationControllerTest          : Started ReservationControllerTest in 0.951 seconds (process running for 1.401)
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /reservations/1
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"59", Cookie:"token=header.payload.signature"]
+             Body = {"reservationDateTime":"2025-06-10T10:00:00","personnel":3}
+    Session Attrs = {}
+
+Handler:
+             Type = finalmission.reservation.controller.ReservationController
+           Method = finalmission.reservation.controller.ReservationController#updateReservation(Long, UpdateReservationRequest, LoginMemberInfo)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"reservationDateTime":"2025-06-10T10:00:00","memberResponse":{"id":1,"name":"eve","email":"eve@example.com"},"restaurantResponse":{"id":1,"name":"restaurant","address":"address","menus":["menu"]},"personnel":3}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"76", Cookie:"token=header.payload.signature"]
+             Body = {"reservationDateTime":"2025-06-10T10:00:00","restaurantId":1,"personnel":2}
+    Session Attrs = {}
+
+Handler:
+             Type = finalmission.reservation.controller.ReservationController
+           Method = finalmission.reservation.controller.ReservationController#createReservation(CreateReservationRequest, LoginMemberInfo)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"reservationDateTime":"2025-06-10T10:00:00","memberResponse":{"id":1,"name":"eve","email":"eve@example.com"},"restaurantResponse":{"id":1,"name":"restaurant","address":"address","menus":["menu"]},"personnel":2}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"76", Cookie:"token=header.payload.signature"]
+             Body = {"reservationDateTime":"2025-06-10T10:00:00","restaurantId":1,"personnel":2}
+    Session Attrs = {}
+
+Handler:
+             Type = finalmission.reservation.controller.ReservationController
+           Method = finalmission.reservation.controller.ReservationController#createReservation(CreateReservationRequest, LoginMemberInfo)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.IllegalArgumentException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"Bad Request","status":400,"instance":"/reservations"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /reservations/1
+       Parameters = {}
+          Headers = [Cookie:"token=header.payload.signature"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = finalmission.reservation.controller.ReservationController
+           Method = finalmission.reservation.controller.ReservationController#deleteById(Long, LoginMemberInfo)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 204
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/choidongjun/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
