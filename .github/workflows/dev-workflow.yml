@@ -105,8 +105,11 @@ jobs:
 
       - name: 컨테이너 재실행
         run: |
-          sudo docker compose --env-file .env -f docker-compose-dev.yml down || true
-          sudo docker compose --env-file .env -f docker-compose-dev.yml up -d
+#          sudo docker compose --env-file .env -f docker-compose-dev.yml down || true
+#          sudo docker compose --env-file .env -f docker-compose-dev.yml up -d
+
+          sudo docker compose -f docker-compose-dev.yml down || true
+          sudo docker compose -f docker-compose-dev.yml up -d
 
       - name: Docker 리소스 정리
         if: env.skip_deploy == 'false'
